@@ -1,0 +1,22 @@
+body {
+  max-width: 1100px;
+  margin: auto;
+  padding: 5px;
+}
+
+li {
+  counter-increment: items;
+}
+li:before {
+  content: "BSM 00" counter(items) " - ";
+}
+li:nth-child(n+10):before {
+  content: "BSM 0" counter(items) " - ";
+}
+li:nth-child(n+100):before {
+  content: "BSM" counter(items) " - ";
+}
+
+img {
+  max-width: 100%;
+}
